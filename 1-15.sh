@@ -2,10 +2,11 @@
 number1=1   #bottom bound
 number2=300 #upper bound
 num3=1 #counter
-if [ -n "$1" ]
+set VAR
+if [ -n "$VAR" ]
 then
-	if [ $1 -ge $number1 ] && [ $1 -le $number2 ]; then #compare the number from user with bounds
-	  while [ $num3 -le $1 ] #while counter less than num from user
+	if [ $VAR -ge $number1 ] && [ $VAR -le $number2 ]; then #compare the number from user with bounds
+	  while [ $num3 -le $VAR ] #while counter less than num from user
 	    do 
 	      echo "dir" `pwgen $num3` "$num3"; #print necessary string with password len = current couner and current counter
 	      ((num3+=1)) #increase counter
